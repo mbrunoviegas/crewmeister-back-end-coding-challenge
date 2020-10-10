@@ -4,6 +4,9 @@
 1. In (v6.5.0 or higher)
 2. `npm i`
 
+### Running
+1. `npm start`
+
 ### Specs
 You can use `npm run test` to run the specs created.
 
