@@ -1,6 +1,6 @@
 # Crewmeister Coding Challenge (Back-End) - Marcelo Bruno Viegas
 
-#### Prerequisites
+### Prerequisites
 1. In (v6.5.0 or higher)
 2. `npm i`
 
