@@ -19,8 +19,8 @@ const createAbsenceICalendar = (absences) => {
         if (error) {
             throw error
         } else {
-            writeFileSync(`${__dirname}../../../download-absences/AbsencesCalendar.ics`, value)
-            return `${__dirname}../../../download-absences/AbsencesCalendar.ics`
+            writeFileSync(`${__dirname}/../../download-absences/AbsencesCalendar.ics`, value)
+            return `${__dirname}/../../download-absences/AbsencesCalendar.ics`
         }
     } else {
         throw 'absences error'
