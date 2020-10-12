@@ -1,9 +1,9 @@
-const express = require('express');
-const absencesController = require('./controllers/AbsencesController');
+const express = require('express')
+const absencesController = require('./controllers/AbsencesController')
 
-const routes = express.Router();
+const routes = express.Router()
 
-routes.get('/', absencesController.getAbsences);
-routes.get('/download', absencesController.getAbsenceICalendar);
+routes.get('/', absencesController.getAbsences)
+routes.get('/download', absencesController.getAbsenceICalendar)
 
-module.exports = routes;
+module.exports = routes

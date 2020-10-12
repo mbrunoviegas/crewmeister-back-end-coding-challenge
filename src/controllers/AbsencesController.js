@@ -5,10 +5,7 @@ const absencesICalendarService = require('../service/AbsencesICalendarService')
 const getAbsenceICalendar = async (request, response) => {
     const absences = await api.absences()
     const members = await api.members()
-    let result = absences
-
-    result = absencesService.getAbsenceEmployees(members, result)
-
+    const result = absencesService.getAbsenceEmployees(members, absences)
     const file = absencesICalendarService.createAbsenceICalendar(result)
     if (file)
         response.download(file)
@@ -21,12 +18,10 @@ const getAbsences = async (request, response) => {
     const members = await api.members()
     let result = absences
 
-    if (Object.keys(request.query).length > 0) {
+    if (Object.keys(request.query).length > 0)
         result = absencesService.filterAbsence(absences, request.query, absencesService.createFilterDate())
-    }
 
     result = absencesService.getAbsenceEmployees(members, result)
-
     return response.json(result)
 };
 

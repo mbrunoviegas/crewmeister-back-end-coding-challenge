@@ -4,9 +4,7 @@ const absenceFactory = require('../factories/AbsenceFactory')
 
 const createICalendarObject = (absences) => {
     if (absences)
-        return absences.map((absence) => {
-            return absenceFactory.calendarObjects(absence);
-        })
+        return absences.map((absence) => absenceFactory.calendarObjects(absence))
     else
         throw 'absences error'
 }
